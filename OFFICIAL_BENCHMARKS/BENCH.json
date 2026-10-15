@@ -1,0 +1,278 @@
+{
+  "schema": "anticloud.tier-bench/1",
+  "project": "AUDIOTOOLS",
+  "source": {
+    "repo_path": "E:\\fenta\\Downloads\\The Anticloud\\ANTICLOUD_REPOS\\AUDIO_CONSUMER\\AUDIOTOOLS\\UPSTREAM_CLONE",
+    "git": {
+      "head": "348ebf2034ce24e2a91a553e3171cb00c0c71678",
+      "url": "https://github.com/descriptinc/audiotools",
+      "branch": "master",
+      "committed_at": "2024-10-24T14:49:53-07:00"
+    }
+  },
+  "metrics": {
+    "files_total": 143,
+    "source_files_scanned": 58,
+    "lines_of_code": 12943,
+    "languages": {
+      ".py": 58,
+      ".wav": 56,
+      ".rst": 8,
+      "(none)": 4,
+      ".md": 4,
+      ".csv": 4,
+      ".css": 2,
+      ".html": 2,
+      ".yaml": 1,
+      ".cfg": 1,
+      ".mp3": 1,
+      ".bat": 1,
+      ".sh": 1
+    }
+  },
+  "licence": {
+    "spdx": "MIT",
+    "class": "A",
+    "source_file": "LICENSE",
+    "redistribution_allowed": true
+  },
+  "dependencies": {
+    "count": 4,
+    "unique": 3,
+    "by_ecosystem": {
+      "pypi": 4
+    },
+    "list": [
+      {
+        "ecosystem": "pypi",
+        "name": "protobuf",
+        "version": ">= 3.19.6, != 4.24.0, < 5.0.0",
+        "source_file": "setup.py",
+        "raw": "protobuf >= 3.19.6, != 4.24.0, < 5.0.0"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "gradio",
+        "version": "==3.32.0",
+        "source_file": "setup.py",
+        "raw": "gradio==3.32.0"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "transformers",
+        "version": ">=4.23.1",
+        "source_file": "setup.py",
+        "raw": "transformers>=4.23.1"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "transformers",
+        "version": ">=4.23.1",
+        "source_file": "setup.py",
+        "raw": "transformers>=4.23.1"
+      }
+    ]
+  },
+  "owasp_top10": {
+    "total_findings": 4,
+    "files_with_findings": 4,
+    "severity": {
+      "high": 0,
+      "medium": 0,
+      "low": 4
+    },
+    "categories": {
+      "A01-BrokenAccessControl": {
+        "count": 0,
+        "findings": []
+      },
+      "A02-CryptographicFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A03-Injection": {
+        "count": 0,
+        "findings": []
+      },
+      "A04-InsecureDesign": {
+        "count": 2,
+        "findings": [
+          {
+            "severity": "low",
+            "file": "docs/conf.py",
+            "line": 10,
+            "cwe": "CWE-",
+            "snippet": "# If extensions (or modules to document with autodoc) are in another directory,"
+          },
+          {
+            "severity": "low",
+            "file": "audiotools/data/transforms.py",
+            "line": 1089,
+            "cwe": "CWE-",
+            "snippet": "# TODO: improve this hack"
+          }
+        ]
+      },
+      "A05-SecurityMisconfiguration": {
+        "count": 0,
+        "findings": []
+      },
+      "A06-VulnerableComponents": {
+        "count": 1,
+        "findings": [
+          {
+            "severity": "low",
+            "file": "setup.py",
+            "line": 67,
+            "cwe": "CWE-1104",
+            "snippet": "\"gradio==3.32.0\","
+          }
+        ]
+      },
+      "A07-AuthFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A08-SoftwareDataIntegrity": {
+        "count": 1,
+        "findings": [
+          {
+            "severity": "low",
+            "file": "audiotools/core/audio_signal.py",
+            "line": 1376,
+            "cwe": "CWE-319",
+            "snippet": "http://en.wikipedia.org/wiki/Discrete_cosine_transform#DCT-II"
+          }
+        ]
+      },
+      "A09-LoggingMonitoringFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A10-SSRF": {
+        "count": 0,
+        "findings": []
+      }
+    }
+  },
+  "owasp_llm_top10": {
+    "total_findings": 1,
+    "files_with_findings": 1,
+    "severity": {
+      "high": 0,
+      "medium": 1,
+      "low": 0
+    },
+    "categories": {
+      "LLM01-PromptInjection": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM02-SensitiveInfoDisclosure": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM03-SupplyChain": {
+        "count": 1,
+        "findings": [
+          {
+            "severity": "medium",
+            "file": "audiotools/core/whisper.py",
+            "line": 16,
+            "cwe": "CWE-494",
+            "snippet": "self.whisper_processor = WhisperProcessor.from_pretrained("
+          }
+        ]
+      },
+      "LLM04-DataPoisoning": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM05-ImproperOutputHandling": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM06-ExcessiveAgency": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM07-SystemPromptLeak": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM08-VectorEmbeddingWeaknesses": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM09-Misinformation": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM10-UnboundedConsumption": {
+        "count": 0,
+        "findings": []
+      }
+    }
+  },
+  "sbom": {
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.5",
+    "serialNumber": "urn:uuid:bec7eb0b-7928-55ef-bdcb-441a4e03f6b6",
+    "version": 1,
+    "metadata": {
+      "timestamp": "2026-10-06T07:56:00Z",
+      "component": {
+        "type": "application",
+        "name": "AUDIOTOOLS",
+        "version": "348ebf2034ce",
+        "bom-ref": "pkg:generic/anticloud/AUDIOTOOLS@348ebf2034ce",
+        "purl": "pkg:generic/anticloud/AUDIOTOOLS@348ebf2034ce",
+        "licenses": [
+          {
+            "license": {
+              "id": "MIT"
+            }
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "anticloud:source-commit",
+          "value": "348ebf2034ce24e2a91a553e3171cb00c0c71678"
+        },
+        {
+          "name": "anticloud:source-url",
+          "value": "https://github.com/descriptinc/audiotools"
+        },
+        {
+          "name": "anticloud:tier",
+          "value": "tier-agent"
+        }
+      ]
+    },
+    "components": [
+      {
+        "type": "library",
+        "name": "protobuf",
+        "version": ">= 3.19.6, != 4.24.0, < 5.0.0",
+        "purl": "pkg:pypi/protobuf@3.19.6, != 4.24.0, < 5.0.0",
+        "bom-ref": "pypi/protobuf@>= 3.19.6, != 4.24.0, < 5.0.0"
+      },
+      {
+        "type": "library",
+        "name": "gradio",
+        "version": "==3.32.0",
+        "purl": "pkg:pypi/gradio@3.32.0",
+        "bom-ref": "pypi/gradio@==3.32.0"
+      },
+      {
+        "type": "library",
+        "name": "transformers",
+        "version": ">=4.23.1",
+        "purl": "pkg:pypi/transformers@4.23.1",
+        "bom-ref": "pypi/transformers@>=4.23.1"
+      }
+    ]
+  },
+  "elapsed_seconds": 6.02
+}

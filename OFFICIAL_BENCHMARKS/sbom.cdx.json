@@ -1,0 +1,60 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:bec7eb0b-7928-55ef-bdcb-441a4e03f6b6",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-06T07:56:00Z",
+    "component": {
+      "type": "application",
+      "name": "AUDIOTOOLS",
+      "version": "348ebf2034ce",
+      "bom-ref": "pkg:generic/anticloud/AUDIOTOOLS@348ebf2034ce",
+      "purl": "pkg:generic/anticloud/AUDIOTOOLS@348ebf2034ce",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    "properties": [
+      {
+        "name": "anticloud:source-commit",
+        "value": "348ebf2034ce24e2a91a553e3171cb00c0c71678"
+      },
+      {
+        "name": "anticloud:source-url",
+        "value": "https://github.com/descriptinc/audiotools"
+      },
+      {
+        "name": "anticloud:tier",
+        "value": "tier-agent"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "protobuf",
+      "version": ">= 3.19.6, != 4.24.0, < 5.0.0",
+      "purl": "pkg:pypi/protobuf@3.19.6, != 4.24.0, < 5.0.0",
+      "bom-ref": "pypi/protobuf@>= 3.19.6, != 4.24.0, < 5.0.0"
+    },
+    {
+      "type": "library",
+      "name": "gradio",
+      "version": "==3.32.0",
+      "purl": "pkg:pypi/gradio@3.32.0",
+      "bom-ref": "pypi/gradio@==3.32.0"
+    },
+    {
+      "type": "library",
+      "name": "transformers",
+      "version": ">=4.23.1",
+      "purl": "pkg:pypi/transformers@4.23.1",
+      "bom-ref": "pypi/transformers@>=4.23.1"
+    }
+  ]
+}
